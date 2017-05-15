@@ -1,0 +1,47 @@
+body {
+    font: 18px Arial;
+    color: white;
+}
+.table {
+    display: table;
+    margin: 100px 0 0 650px;
+}
+.table-cell {
+    display: table-cell;
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+.row-1 .table-cell {
+    background-image: linear-gradient(to bottom right, green, red);
+}
+.row-2 .table-cell {
+    background-image: linear-gradient(to bottom left, blue, pink);
+}
+.row-3 .table-cell {
+    background-image: linear-gradient(to right, red, black);
+}
+h2 {
+    margin: 20px;
+}
+p {
+    margin-left: 20px;
+}
+.hidden {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    top: -18px;
+    left: -20px;
+    display: none;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+}
+.hidden {
+    padding-top: 90px;
+}
+.table-cell:hover .hidden {
+    display: block;
+    background: rgba(50,0,200, 0.8);
+}
