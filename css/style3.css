@@ -12,15 +12,7 @@ body {
     width: 300px;
     position: relative;
 }
-.row-1 .table-cell {
-    background-image: linear-gradient(to bottom right, green, red);
-}
-.row-2 .table-cell {
-    background-image: linear-gradient(to bottom left, blue, pink);
-}
-.row-3 .table-cell {
-    background-image: linear-gradient(to right, red, black);
-}
+
 h2 {
     margin: 20px;
 }
@@ -44,4 +36,26 @@ p {
 .table-cell:hover .hidden {
     display: block;
     background: rgba(50,0,200, 0.8);
+}
+.cell-1{
+    background-image: linear-gradient(to bottom right, green, red);
+}
+.cell-2{
+    background: url(../images/3-1.jpg);
+    background-size: cover;
+}
+.cell-3{
+    background: url(../images/3-2.jpg);
+    background-size: cover;
+}
+.cell-4{
+    background: url(../images/3-3.jpg);
+    background-size: cover;
+}
+.cell-5{
+    background: url(../images/3-4.jpg);
+    background-size: cover;
+}
+.cell-6 {
+    background-image: linear-gradient(to right, red, black);
 }
