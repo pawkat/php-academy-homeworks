@@ -16,25 +16,29 @@ for (var i = 2; i <=10; i++) {
 console.log("---- Task 3 ----");
 var from = 2;
 var to = 10;
-nextPrime:
-for (var a = from; a <= to; a++) {
-    for (var j = 2; j < a; j++) {
-        if (a % j == 0) {
-            continue nextPrime;
+var isSimple;
+for (var currentNumber = from; currentNumber <= to; currentNumber++) {
+    var isSimple = true;
+    for (var j = 2; j < currentNumber; j++) {
+        if (currentNumber % j == 0) {
+            isSimple = false;
         }
     }
-    console.log(a)
+    if (isSimple) {
+        console.log(currentNumber)
+    }
 }
-// console.log("---- Task 4 ----");
-// var fromNumber = 5;
-// var toNumber = fromNumber;
-// nextPrime2:
-//     for (var d = fromNumber; d <= toNumber; ) {
-//         for (var q = 2; q < d; q++) {
-//             if (d % q == 0) {
-//
-//             }
-//             console.log(true);
-//         }
-//         console.log(false)
-//     }
+console.log("---- Task 4 ----");
+function test(number) {
+        var isSimple = true;
+        for (var j = 2; j < currentNumber; j++) {
+            if (currentNumber % j == 0) {
+                isSimple = false;
+                console.log(isSimple)
+            }
+        }
+        if (isSimple) {
+            console.log(isSimple);
+        }
+};
+test(5);

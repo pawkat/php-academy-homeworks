@@ -20,8 +20,16 @@ var result = str
     .replace ("Some time ago", "Yesterday")  //Yesterday ago I was here
     .concat (" and there");
 console.log(result);
+var str1 = [10, 20, 30, 40];
+var result1 = str1
+    .join(";")
+console.log(result1);
+// "10, 20, 30, 40" --> "10; 20; 30; 40"
 console.log("---- Task 3 ----");
 var nums = [6, 4, 9, 3, 5, 2];
-var nums2 = nums;
-nums2.sort();
+var nums2 = nums.slice(0);
+nums2.sort(function (a, b) {
+    return a - b;
+});
+console.log(nums);
 console.log(nums2);
