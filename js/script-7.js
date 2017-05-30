@@ -22,7 +22,6 @@ var result = str
 console.log(result);
 console.log("---- Task 3 ----");
 var nums = [6, 4, 9, 3, 5, 2];
-var nums2 = [6, 4, 9, 3, 5, 2];
+var nums2 = nums;
 nums2.sort();
-console.log(nums);
 console.log(nums2);
