@@ -33,3 +33,20 @@ nums2.sort(function (a, b) {
 });
 console.log(nums);
 console.log(nums2);
+console.log("---- Task 4(camleCase) ----");
+function toCamelCase(str) {
+    var words = str.split('-');
+    console.log(words)
+
+    words = words.map(function (w, i) {
+        if(i > 0) {
+            return w[0].toUpperCase() + w.substr(1)
+        } else {
+            return w;
+        }
+    });
+    return words.join('')
+}
+
+console.log(toCamelCase("background-color"));
+console.log(toCamelCase("-webkit-transform"));

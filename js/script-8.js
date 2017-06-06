@@ -1,12 +1,22 @@
 console.log("_______TASK 1_______");
 
 // ADD
+
+//если такой подход - добавить пробелы в конце и в начале(в исходной строке
+
+// function addClass(el, addedText){
+//     if (el.indexOf(addedText) > -1) {
+//         return str;
+//     } else if (el.indexOf(addedText) == -1) {
+//         return el + ' ' + addedText;
+//     }
+// }
 function addClass(el, addedText){
-    if (el.indexOf(addedText) > -1) {
-        return str;
-    } else if (el.indexOf(addedText) == -1) {
-        return el + ' ' + addedText;
+    var list = str.split(' ');
+    if (list.indexOf(addedText) == -1) {
+        list.push(addedText)
     }
+    return list.join(' ')
 }
 
 
@@ -14,7 +24,15 @@ function addClass(el, addedText){
 
 function removeClass(el, removedText) {
     return el.replace(removedText + " ", '');
+
+    // ВТОРОЙ ВАРИАНТ
+    // var list = str.split(' ');
+    // list = list.filter(function (c) {
+    //     returnc !== cls;
+    // })
+    // return list.join(' ')
 }
+
 
 //TOGGLE
 
