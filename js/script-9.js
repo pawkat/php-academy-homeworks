@@ -78,6 +78,3 @@ btns[9].addEventListener('click', function () {
     var to = headers[10].getBoundingClientRect().top;
     scrollBy(0, to)
 });
-// toTop.addEventListener('click', function () {
-//     scrollTo(0, 0)
-// });
