@@ -1,0 +1,99 @@
+.display {
+    display: table-row !important;
+}
+.inst1 {
+    display: none;
+
+}
+.add {
+    display: none;
+}
+.inst2 {
+    display: none;
+  }
+header {
+    margin-bottom: 40px;
+}
+header ul li {
+    display: inline;
+    padding: 10px 30px;
+    margin: 0;
+}
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+    background-color: cornflowerblue
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+.cB {
+    display: block;
+    padding: 9.5px;
+    color: black;
+    background-color: cornflowerblue;
+}
+.cB:hover {
+    background-color: cadetblue;
+}
+ul.menu > li > a:hover {
+    background-color: cadetblue;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+}
+
+ul.submenu li {
+    display: block;
+    width: 78px;
+
+}
+ul.submenu > li > a{
+    display: block;
+    padding: 10px;
+    color: black;
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+.number {
+    width: 94px;
+}
+.yes {
+    padding: 5px;
+    margin-top: 5px;
+    width: 40px;
+    background: cornflowerblue;
+}
+.yes:hover {
+    background-color: cadetblue;
+}
+.displayNone{
+    display: none;
+}
+.displayBlock {
+    display: block !important;
+}
+/*ALL CSS????*/
+/*!*one more change*!*/
+/*and one more*/

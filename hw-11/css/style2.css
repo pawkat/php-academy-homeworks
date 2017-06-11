@@ -1,0 +1,79 @@
+.smile {
+ position: relative;
+ width: 100px;
+ height: 100px;
+ background: yellow;
+ border-radius: 100%;
+}
+.eye, .mouth {
+ background: black;
+}
+.eye {
+ position: absolute;
+ width: 10px;
+ height: 10px;
+ border-radius: 100%;
+ top: 30px;
+ left: 25px;
+ display: none;
+}
+.eye-left {
+ display: block;
+}
+.eye-right {
+ display: block;
+ left: 65px;
+}
+.mouth {
+ position: absolute;
+ width: 46px;
+ height: 10px;
+ top: 60px;
+ left: 25px;
+}
+.eye-2 {
+ margin: 50px 0 0 50px;
+ position: relative;
+ width: 150px;
+ height: 150px;
+ background: silver;
+}
+.eye-2-1 {
+ position: absolute;
+ width: 150px;
+ height: 150px;
+ background: white;
+ border-radius: 100%;
+}
+.eye-2-2 {
+position: absolute;
+ width: 80px;
+ height: 80px;
+ background: skyblue;
+ border-radius: 100%;
+ top: 20px;
+ right: 20px;
+}
+.eye-2-3 {
+ position: absolute;
+ width: 40px;
+ height: 40px;
+ background: black;
+ border-radius: 100%;
+ top: 30px;
+ right: 33px;
+}
+.eye-2-4 {
+ position: absolute;
+ width: 10px;
+ height: 10px;
+ background: white;
+ border-radius: 100%;
+ top: 37px;
+ right: 40px;
+}
+img{
+ position: absolute;
+ left: 150px;
+
+}
