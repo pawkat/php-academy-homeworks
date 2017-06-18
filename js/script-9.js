@@ -9,8 +9,6 @@ function makeCounter() {
 var counter = makeCounter();
 
 var countClick = d.querySelector('.change');
-var toTop = d.querySelector('.last');
-
 
 countClick.addEventListener('click', function () {
     if (countClick.value == "Кнопка") {
@@ -22,59 +20,71 @@ countClick.addEventListener('click', function () {
     }
 });
 
-toTop.addEventListener('click', function () {
-    setInterval (function () {
-        scrollBy(0, -10)
-    }, 10)
-});
 
  var btns = d.querySelectorAll("button");
 console.log(btns);
-var headers = d.querySelectorAll("h2");
-console.log(headers);
 
-btns[0].addEventListener('click', function () {
-    var to = headers[1].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
 
-btns[1].addEventListener('click', function () {
-    var to = headers[2].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
+function scrollClickButton (buttonClassName){
+    var el = d.querySelector("." + buttonClassName);
+    el.onclick = function() {
+        var positionButton  = el.nextElementSibling.getBoundingClientRect().top;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var animateScroll = setInterval(function(){
+            var positionButton  = el.nextElementSibling.getBoundingClientRect().top;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var intervalScroll = (positionButton + 40)/20;
+            var scrollToY = scrollTop + intervalScroll;
+            if ( positionButton  <= 0){
+                clearInterval(animateScroll);
+            }
+            else if(positionButton >= 1){
+                setTimeout(function() {
+                    window.scrollTo(0,scrollToY);
+                }, 2)
 
-btns[2].addEventListener('click', function () {
-    var to = headers[3].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
+            }
+        }, 10);
+        return animateScroll;
+    };
+}
 
-btns[3].addEventListener('click', function () {
-    var to = headers[4].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
+scrollClickButton(btns[0].className);
+scrollClickButton(btns[1].className);
+scrollClickButton(btns[2].className);
+scrollClickButton(btns[3].className);
+scrollClickButton(btns[4].className);
+scrollClickButton(btns[5].className);
+scrollClickButton(btns[6].className);
+scrollClickButton(btns[7].className);
+scrollClickButton(btns[8].className);
+//
 
-btns[4].addEventListener('click', function () {
-    var to = headers[5].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
+var toTop = d.querySelector('.last');
+//
+function scrollToTop (buttonClassName){
+    var el = d.querySelector("." + buttonClassName);
+    el.onclick = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var intevalScroll = 20;
+        var scrollToY = scrollTop - intevalScroll;
+        var animateScroll = setInterval(function(){
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var intevalScroll = 20;
+            var scrollToY = scrollTop - intevalScroll;
+            if ( scrollTop  <= 0){
+                clearInterval(animateScroll);
+            }
+            else if(scrollTop >= 1){
+                setTimeout(function() {
+                    window.scrollTo(0,scrollToY);
+                }, 1)
 
-btns[5].addEventListener('click', function () {
-    var to = headers[6].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
-btns[6].addEventListener('click', function () {
-    var to = headers[7].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
-btns[7].addEventListener('click', function () {
-    var to = headers[8].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
-btns[8].addEventListener('click', function () {
-    var to = headers[9].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
-btns[9].addEventListener('click', function () {
-    var to = headers[10].getBoundingClientRect().top;
-    scrollBy(0, to)
-});
+            }
+        }, 15);
+        return animateScroll;
+    };
+}
+
+
+scrollToTop("last");
