@@ -34,11 +34,13 @@ var callBack = d.querySelector(".cB");
 var subMenu = d.querySelector(".submenu");
 var number = d.querySelector(".number");
 var yes = d.querySelector(".yes");
-console.log(d.querySelector(".cB").classList);
+console.log(d.querySelector(".cB").className);
+
 callBack.addEventListener('click', function () {
     d.querySelector(".submenu").classList.add("displayBlock");
     console.log("display: block");
 });
+
 yes.addEventListener('click', function () {
     if (d.querySelector(".number").value != '') {
         console.log((d.querySelector(".number").value))
@@ -48,25 +50,14 @@ yes.addEventListener('click', function () {
 });
 
 // Как проверить что кликнул не не на блок, а в любое другое место (что то вроде if(click !== e.target) - проверить что кликнул не на (e.target);
-// d.addEventListener('click', function (event) {
-//     if(event.target.class != d.querySelector(".cB").class &&
-//         event.target.class != d.querySelector(".submenu").class &&
-//         d.querySelector(".submenu").classList[1] == 'displayBlock') {
-//         d.querySelector(".submenu").classList.remove("displayBlock");
-//         console.log("display: none");
-//     }
-//     // d.querySelector(".submenu").classList.remove("displayBlock");
-//     // console.log("display: none");
-// });
-
-
-// d.addEventListener('click', function (event) {
-//     if (event.target.class != subMenu.class &&
-//         event.target.class != subMenu.class  &&
-//         subMenu.style.display == 'block') {
-//         if(event.target.class == number.class || event.target.id == subMenu.class) {
-//             return false;
-//         }
-//         subMenu.classList.remove('displayBlock');
-//     }
-// });
+d.addEventListener('click', function (event) {
+    if(event.target.className != d.querySelector(".cB").className &&
+        event.target.className != d.querySelector(".yes").className &&
+        event.target.className != d.querySelector(".submenu").className &&
+        event.target.className != d.querySelector(".number").className &&
+        d.querySelector(".submenu").classList[1] == 'displayBlock'
+        ) {
+        d.querySelector(".submenu").classList.remove("displayBlock");
+        console.log("display: none");
+    }
+});
