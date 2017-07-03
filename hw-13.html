@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 13</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/script-13.js" defer></script>
+    <style>
+        input[type='text']{
+            width: 250px;
+        }
+        .ulList{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 250px;
+            border: 1px solid silver;
+        }
+        a {
+            text-decoration: none;
+            /*width: 100%;*/
+            display: block;
+            color: black;
+        }
+        li:hover {
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+<form action="#">
+    <table>
+        <tr>
+            <td><lablel for="apple">Apple:</lablel></td>
+            <td>
+                <select name="apple" id="apple">
+                    <option value="none">nothing</option>
+                    <option value="6">iPhone 6</option>
+                    <option value="6+">iPhone 6+</option>
+                    <option value="7">iPhone 7</option>
+                    <option value="7+">iPhone 7+</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><lablel for="samsung">Samsung:</lablel></td>
+            <td>
+                <select name="samsung" id="samsung">
+                    <option value="none">nothing</option>
+                    <option value="s7">Galaxy S7</option>
+                    <option value="s7e">Galaxy S7 edge</option>
+                    <option value="s8">Galaxy S8</option>
+                    <option value="s8+">Galaxy S8+</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><lablel for="mi">Xiaomi:</lablel></td>
+            <td>
+                <select name="mi" id="mi">
+                    <option value="none">nothing</option>
+                    <option value="mi5s">Mi 5s</option>
+                    <option value="mi5pro">Mi 5 Pro</option>
+                    <option value="mimix">Mi Mix</option>
+                    <option value="mi6">Mi 6</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td><lablel for="meizu">Meizu</lablel></td>
+            <td>
+                <select name="meizu" id="meizu">
+                    <option value="none">nothing</option>
+                    <option value="mm5n">Meizu M5 Note</option>
+                    <option value="mm5s">Meizu M5s</option>
+                    <option value="mp6">Meizu Pro 6</option>
+                    <option value="mp6+">Meizu Pro 6 Plus</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td><input type="button" value="Save" class="btn"></td></tr>
+    </table>
+    <input type="text" class="search" placeholder="search" autofocus>
+    <ul class="ulList"></ul>
+
+
+
+
+
+
+
+</form>
+</body>
+</html>
